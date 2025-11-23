@@ -1,6 +1,12 @@
-function volume_sphere() {
-    //Write your code here
-  
-} 
+let radius = document.querySelector("#radius");
+let volume = document.querySelector("#volume");
+let calculate = document.querySelector("#submit");
 
-window.onload = document.getElementById('MyForm').onsubmit = volume_sphere;
+console.dir(volume)
+
+calculate.addEventListener("click",function(e){
+  e.preventDefault();
+  let r=Number(radius.value)
+  let ans=((4/3)*3.14*r*r*r);
+  volume.value=ans;
+})
